@@ -16,6 +16,6 @@ injector()(function($state) {
 
 By default it assumes you've put your `ng-app` attribute on the HTML tag.
 
-If not, you can use a selector too : `ngInjector('#shoppingcart')`
+If not, you can use a selector too : `injector('#shoppingcart')`
 
 Install with `npm install nginjector --save`
