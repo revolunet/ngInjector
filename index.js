@@ -32,7 +32,11 @@ module.exports = function ngInjector() {
     var selector = arguments[0] === undefined ? "html" : arguments[0];
 
     if (!injectors[selector]) {
-        injectors[selector] = angular.element(document.querySelector(selector)).injector();
+        var target = document.querySelector(selector);
+        if (!target) {
+            throw "cannot locate angular injector";
+        }
+        injectors[selector] = angular.element(target).injector();
     }
     return injectors[selector];
 };

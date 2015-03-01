@@ -30,7 +30,11 @@ var injectors = {};
 
 module.exports = function ngInjector(selector='html') {
     if (!injectors[selector]) {
-        injectors[selector] = angular.element(document.querySelector(selector)).injector();
+        var target = document.querySelector(selector);
+        if (!target) {
+            throw "cannot locate angular injector";
+        }
+        injectors[selector] = angular.element(target).injector();
     }
     return injectors[selector];
 }
