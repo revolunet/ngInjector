@@ -1,0 +1,24 @@
+{
+  "name": "nginjector",
+  "version": "0.0.1",
+  "description": "quick access to the angular DI from external world (ES6)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel index.es6 -d .",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/revolunet/ngInjector"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Julien Bouquillon <julien@revolunet.com> (http://revolunet.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/revolunet/ngInjector/issues"
+  },
+  "homepage": "https://github.com/revolunet/ngInjector"
+}
